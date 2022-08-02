@@ -1,0 +1,21 @@
+<div class="row">
+  
+  <div class="col-sm-3"><button class="btn btn-secondary" (click)="addCategory()">Add Category</button></div>
+
+</div>
+<table>
+    <h3>Department Data</h3>
+   <tr>
+    <td>Dept No</td>
+    <td>Dept Name</td>
+    <td>Location</td>
+   </tr>
+
+   <tr *ngFor ="let dep of departments">
+     <td>{{dep.deptNo}}</td>
+     <td>{{dep.dName}}</td>
+     <td>{{dep.location}}</td>
+   </tr>
+
+
+</table>

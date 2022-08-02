@@ -1,0 +1,46 @@
+<!-- <p>emplist works!</p> -->
+<div class="row">
+  <div class="col-sm-3"><button class="btn btn-secondary" (click)="addEmployee()">Add Employee</button></div>
+  <!-- &nbsp;
+  <div class="col-sm-3"><button class="btn btn-secondary" (click)="addCategory()">Add Category</button></div> -->
+  <div class="col-sm-3"><h3>Employee Data</h3></div>
+
+</div>
+<table table-primary>
+    
+    <tr>
+        <td>EmpNo</td>
+        <td>Employee Name</td>
+        <td>Job</td>
+        <td>Hire Date</td>
+        <td>Manager Id</td>
+        <td>Salary</td>
+        <td>Commission</td>
+        <td>Dept No</td>
+        <td>Action</td>
+      </tr> 
+
+      <tr *ngFor ="let emp of employees">
+        <td>{{emp.empNo}}</td>
+        <td>{{emp.eName}}</td>
+        <td>{{emp.job}}</td>
+        <td>{{emp.hireDate}}</td>
+        <td>{{emp.managerId}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.commission}}</td>
+        <td>{{emp.deptNo}}</td>
+
+        <td> 
+          <button type="submit" class="btn btn-info" (click)="updateEmp(emp.empNo)"> Update </button>
+          &nbsp;
+          <button type="submit" class="btn btn-info" (click)="deleteEmp(emp.empNo)"> Delete </button>
+      </td>
+
+      </tr>
+   
+</table>
+&nbsp;
+
+<button class="btn btn-info" (click)="backtoHome()"> Back to Home</button>
+
+

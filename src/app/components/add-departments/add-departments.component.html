@@ -1,0 +1,21 @@
+
+<body>
+    <h3>Add Category</h3>
+    <form #department = "ngForm" (ngSubmit) = onSubmit()>
+    <div class="form">
+<label> <b>Department No</b> </label> <br>
+    <input type="number" name="deptNumber" [(ngModel)]="formModel.deptNo">    
+    <br>   
+    <label> <b>Department</b> </label> <br>
+    <input type="text" name="department" [(ngModel)]="formModel.dName">    
+    <br> 
+    <label> <b>Location</b> </label> <br>
+    <input type="text" name="location" [(ngModel)]="formModel.location">    
+    <br><br>  
+    
+     <div class="row">
+        <div class="col-sm-3">
+          <input type="submit" name="submit" value="submit" class="btn btn-primary"/>
+        </div>
+    
+ 

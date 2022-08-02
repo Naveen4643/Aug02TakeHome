@@ -1,0 +1,180 @@
+<hr> 
+
+&nbsp;
+<button class="btn btn-info" (click)="goBack()"> Go Back </button>
+<form #employeeForm="ngForm" (ngSubmit)="onSubmit()"> 
+     &nbsp;
+    <div class="row">
+     <h1> <div class="col-sm-3"><label>Details Form</label></div> </h1>
+        
+    </div>
+    &nbsp;
+         
+    <div class="row">
+        <div class="col-sm-3"><label>Employee no</label></div>
+        <div class="col-sm-6"><input type="text" name="empNo" [(ngModel)]="employee.empNo"/></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label>Employee Name</label></div>
+        <div class="col-sm-6"><input type="text" name="empName" [(ngModel)]="employee.eName"/></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label>Job</label></div>
+        <div class="col-sm-6"><input type="text" name="job" [(ngModel)]="employee.job"/></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label>Hire Date</label></div>
+        <div class="col-sm-6"><input type="date" name="hireDate" [(ngModel)]="employee.hireDate"/></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label>Manager ID </label></div>
+        <div class="col-sm-6"><input type="text" name="managerId" [(ngModel)]="employee.managerId"/></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label>Salary</label></div>
+        <div class="col-sm-6"><input type="text" name="salary" [(ngModel)]="employee.salary"/></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label>Commission</label></div>
+        <div class="col-sm-6"><input type="text" name="commision" [(ngModel)]="employee.commission"/></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label>Department No</label></div>
+        <div class="col-sm-6">
+            <select name="dept" [(ngModel)] ="employee.deptNo">
+                <option>Select</option>
+                <option *ngFor="let dept of departments" value="{{dept.deptNo}}">{{dept.dName}}</option>
+            </select>
+        </div>
+    </div>
+    &nbsp;
+
+    <div class="row">
+        
+        <div class="col-sm-3">
+            <input style="background-color:greenyellow;height:50px;width:80px"type="submit" name="submit" value="submit" class="btn btn-primary"/></div>
+        &nbsp;
+            <div class="col-sm-3">
+                <input style="background-color:greenyellow;height:50px;width:80px"type="reset" name="reset" value="Reset" class="btn btn-primary"/></div>
+    </div>
+    &nbsp;
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<h2 class="col-sm-3" ><b>Add Employee</b></h2>
+<form #employee ="ngForm" (ngSubmit) = onSubmit()>
+    <div class="row">
+        <div class="col-sm-3">Employee Number</div>
+        <div class="col-sm-6"><input type="text" name="empNo" [(ngModel)]="formModel.empNo"></div>
+    </div>
+    &nbsp;
+    <div class="row">
+      <div class="col-sm-3">Employee Name</div>
+      <div class="col-sm-6"><input type="text" name="eName" [(ngModel)]="formModel.eName"></div>
+  </div>
+  &nbsp;
+  <div class="row">
+    <div class="col-sm-3">Job</div>
+    <div class="col-sm-6"><input type="text" name="job"  [(ngModel)]="formModel.job"></div>
+</div>
+&nbsp;
+<div class="row">
+  <div class="col-sm-3">Hire Date</div>
+  <div class="col-sm-6"><input type="date" name="hireDate" [(ngModel)]="formModel.hireDate"></div>
+</div>
+&nbsp;
+<div class="row">
+  <div class="col-sm-3">Manager Id</div>
+  <div class="col-sm-6"><input type="text" name="managerId"  [(ngModel)]="formModel.managerId"></div>
+</div>
+&nbsp;
+
+<div class="row">
+    <div class="col-sm-3">Salary</div>
+    <div class="col-sm-6"><input type="text" name="salary"  [(ngModel)]="formModel.salary"></div>
+  </div>
+  &nbsp;
+
+  <div class="row">
+    <div class="col-sm-3">Commission</div>
+    <div class="col-sm-6"><input type="text" name="commission"  [(ngModel)]="formModel.commission"></div>
+  </div>
+  &nbsp;
+  <!-- <div class="row">
+    <div class="col-sm-3">Dept No</div>
+    <div class="col-sm-6"><input type="number" name="deptNo"  [(ngModel)]="formModel.deptNo"></div>
+  </div> -->
+
+  <!-- <div class="form-group row">
+    <div class="col-sm-2"><label>Departments</label></div>
+    <div class="col-sm-4">
+        <select name="dept" [(ngModel)] = "formModel.deptNo">
+            
+            <option *ngFor="let dept of departments" value="{{dept.deptNo}}">{{dept.dName}}</option>
+        </select>
+
+    </div>
+</div>
+
+  &nbsp;
+<div class="row">
+  <div class="col-sm-3">
+    <input style="background-color:greenyellow;height:50px;width:80px"type="submit" name="submit" value="submit" class="btn btn-primary"/></div>
+  &nbsp;
+  <div class="col-sm-3">
+                <input style="background-color:greenyellow;height:50px;width:80px"type="reset" name="reset" value="Reset" class="btn btn-primary"/></div>
+    </div>
+  
+
+
+
+</div>
+</form> --> -->
