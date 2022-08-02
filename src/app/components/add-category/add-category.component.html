@@ -1,0 +1,17 @@
+<p>add-category works!</p>
+<body>
+    <h3>Add Category</h3>
+    <form #department = "ngForm" (ngSubmit) = onSubmit()>
+    <div class="form">
+<label> <b>Category Id</b> </label> <br>
+    <input type="number" name="Category_Id" [(ngModel)]="formModel.categoryId">    
+    <br>   
+    <label> <b>Category Name</b> </label> <br>
+    <input type="text" name="categoryName" [(ngModel)]="formModel.categoryName">    
+       
+    <br><br>  
+    
+     <div class="row">
+        <div class="col-sm-3">
+          <input type="submit" name="submit" value="submit" class="btn btn-primary"/>
+        </div>

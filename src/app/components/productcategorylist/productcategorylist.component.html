@@ -1,0 +1,15 @@
+<div class="col-sm-3"><button class="btn btn-secondary" (click)="addCategory()">Add Category</button></div>
+<h3>Categories</h3>
+
+<table>
+    <tr>
+        <td>Category Id</td>
+        <td>Category Name</td>
+    </tr>
+
+    <tr *ngFor="let cat of categories">
+        <td>{{cat.categoryId}}</td>
+        <td>{{cat.categoryName}}</td>
+    </tr>
+    
+</table>

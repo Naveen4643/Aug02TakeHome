@@ -1,0 +1,19 @@
+<h2 class="col-sm-3" ><b>Add Category</b></h2>
+<form #Category ="ngForm" (ngSubmit) = onSubmit()>
+    <div class="row">
+        <div class="col-sm-3">Category_Id</div>
+        <div class="col-sm-6"><input type="text" name="id" [(ngModel)]="cat.categoryId"></div>
+    </div>
+    &nbsp;
+    <div class="row">
+      <div class="col-sm-3">Category_Name</div>
+      <div class="col-sm-6"><input type="text" name="name" [(ngModel)]="cat.categoryName"></div>
+  </div>
+  &nbsp;
+<div class="row">
+  <div class="col-sm-3">
+    <input type="submit" name="submit" value="submit" class="btn btn-primary"/>
+  </div>
+  </div>
+
+  </form>

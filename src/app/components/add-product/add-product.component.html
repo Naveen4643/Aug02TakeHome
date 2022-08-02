@@ -1,0 +1,100 @@
+
+<body>
+<h2 class="col-sm-3" ><b> Product</b></h2>
+<form #Product ="ngForm" (ngSubmit) = onSubmit()>
+    <div class="row">
+        <div class="col-sm-3">Id</div>
+        <div class="col-sm-6"><input type="text" name="id" [(ngModel)]="formModel.id"></div>
+    </div>
+    &nbsp;
+    <div class="row">
+      <div class="col-sm-3">Sku</div>
+      <div class="col-sm-6"><input type="text" name="sku" [(ngModel)]="formModel.sku"></div>
+  </div>
+  &nbsp;
+  <div class="row">
+    <div class="col-sm-3">Name</div>
+    <div class="col-sm-6"><input type="text" name="name"  [(ngModel)]="formModel.name"></div>
+</div>
+&nbsp;
+<div class="row">
+  <div class="col-sm-3">Description</div>
+  <div class="col-sm-6"><input type="text" name="description" [(ngModel)]="formModel.description"></div>
+</div>
+&nbsp;
+<div class="row">
+  <div class="col-sm-3">Unit Price</div>
+  <div class="col-sm-6"><input type="text" name="unitPrice"  [(ngModel)]="formModel.unitPrice"></div>
+</div>
+&nbsp;
+
+<div class="row">
+    <div class="col-sm-3">Image Url</div>
+    <div class="col-sm-6"><input type="text" name="imageUrl"  [(ngModel)]="formModel.imageUrl"></div>
+  </div>
+  &nbsp;
+
+  <div class="row">
+    <div class="col-sm-3">Active</div>
+    <div class="col-sm-6"><input type="boolean" name="active"  [(ngModel)]="formModel.active"></div>
+  </div>
+  &nbsp;
+  <div class="row">
+    <div class="col-sm-3">Units_In_Stock</div>
+    <div class="col-sm-6"><input type="number" name="unitsInStock"  [(ngModel)]="formModel.unitsInStock"></div>
+  </div>
+  &nbsp;
+
+  <div class="row">
+    <div class="col-sm-3">Date Created</div>
+    <div class="col-sm-6"><input type="date" name="dateCreated"  [(ngModel)]="formModel.dateCreated"></div>
+  </div>
+  &nbsp;
+
+  <div class="row">
+    <div class="col-sm-3">Last_Updated</div>
+    <div class="col-sm-6"><input type="date" name="lastUpdated"  [(ngModel)]="formModel.lastUpdated"></div>
+  </div>
+  &nbsp;
+
+  <!-- <div class="row">
+    <div class="col-sm-3">Category_Id</div>
+    <div class="col-sm-6"><input type="text" name="categoryId"  [(ngModel)]="formModel.categoryId"></div>
+  </div> -->
+
+  <!-- <div class="form-group row">
+    <div class="col-sm-3"><label>Categories</label></div>
+    <div class="col-sm-6">
+        <select name="dept" [(ngModel)] = "formModel.categoryId">
+            <!-- <option *ngFor="let dept of categories" value="{{dept.categoryId}}">{{dept.categoryName}}</option> -->
+            <!-- <option value="1">Mobiles</option>
+            <option value="2">Electronics</option>
+            <option value="3">Accessories</option>
+        </select>
+
+    </div>
+</div> --> 
+
+<div class="row">
+  <div class="col-sm-3"><label>Category ID</label></div>
+  <div class="col-sm-6">
+   <select name="category" [(ngModel)] ="formModel.categoryId">
+       <option>Select</option>
+       <option *ngFor="let cat of categories" value="{{cat.categoryId}}">{{cat.categoryName}}</option>
+   </select>
+   </div>
+</div>
+
+  &nbsp;
+<div class="row">
+  <div class="col-sm-3">
+    <input type="submit" name="submit" value="submit" class="btn btn-primary"/>
+  </div>
+  <div class="col-sm-3">
+    <input type="reset" name="Reset" value="reset" class="btn btn-primary"/>
+  </div>
+
+
+</div>
+</form>
+</body>
